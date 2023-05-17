@@ -1,4 +1,4 @@
-import streamlit as st
+ import streamlit as st
 from collections import defaultdict
 
 # Set Lists and Dictionary
@@ -17,21 +17,23 @@ def calculate_rer(dog_weight,dog_size):
 # Calculate Growth DER & Maintenance DER 
 def calculate_calories(dog_weight, dog_age, dog_size):
     dog_rer = calculate_rer(dog_weight,dog_size)
-    # st.caption(f"Your dogs RER(Resting Energy Requirement) is :red[{dog_rer}] calories per day.")
     return round(dog_rer * calc_dict[dog_age], 2)
-     
+
+# Set title     
 st.title("Calculate calories for your :dog:")
+
+# Display app description
 st.caption("This application provides an estimated calculation of the daily caloric needs for your dog based on their age/condition, size and weight.")
+
+# Display disclaimer
 st.caption("Please Note: This estimate does not replace professional health advice of a veterinarian.")
 
+# Display input fields
 dog_age = st.selectbox("Select your dog's age/condition", options=age_list,index=2)
-# st.markdown("""<a href="https://d2zp5xs5cp8zlg.cloudfront.net/image-35319-800.jpg"> Determine if your dog is obese.</a>""")
-# st.write("Determine your dogs condition :link[https://d2zp5xs5cp8zlg.cloudfront.net/image-35319-800.jpg]")
-
 dog_size = st.select_slider("Select your dog's size", options=size_list,value=size_list[1])
-
 dog_weight = st.number_input("Enter your dog's current weight in kg", min_value=0.0, step=0.5, value=28.0)
 
+# Calculate calories and display output
 if st.button("Calculate"):
     calories = calculate_calories(dog_weight, dog_age, dog_size)
     if dog_age == age_list[0] or dog_age == age_list[1]:
