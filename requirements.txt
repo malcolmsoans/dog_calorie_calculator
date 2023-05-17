@@ -1,2 +1,11 @@
+altair
+boto3
+ccxt
+google
+gspread
+pandas
+requests
+regex
+s3fs==0.4.*
 protobuf~=3.19.0
 streamlit==1.1.*
