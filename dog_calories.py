@@ -22,7 +22,7 @@ def calculate_calories(dog_weight, dog_age, dog_size):
      
 st.title("Calculate calories for your :dog:")
 st.caption("This application provides an estimated calculation of the daily caloric needs for your dog based on their age/condition, size and weight.")
-st.caption(":red[Please Note: This estimate does not replace professional health advice of a veterinarian.]")
+st.caption("Please Note: This estimate does not replace professional health advice of a veterinarian.")
 
 dog_age = st.selectbox("Select your dog's age/condition", options=age_list,index=2)
 # st.markdown("""<a href="https://d2zp5xs5cp8zlg.cloudfront.net/image-35319-800.jpg"> Determine if your dog is obese.</a>""")
@@ -35,6 +35,6 @@ dog_weight = st.number_input("Enter your dog's current weight in kg", min_value=
 if st.button("Calculate"):
     calories = calculate_calories(dog_weight, dog_age, dog_size)
     if dog_age == age_list[0] or dog_age == age_list[1]:
-        st.write(f"Your dogs GER(Growth Energy Requirements) is :red[{calories}] calories per day.")
+        st.write(f"Your dogs GER(Growth Energy Requirements) is [{calories}] calories per day.")
     else:
-        st.write(f"Your dogs DER(Daily Energy Requirements) is :red[{calories}] calories per day.")    
+        st.write(f"Your dogs DER(Daily Energy Requirements) is {calories} calories per day.")    
