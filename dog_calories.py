@@ -26,7 +26,7 @@ st.title("Calculate calories for your :dog:")
 st.caption("This application provides an estimated calculation of the daily caloric needs for your dog based on their age/condition, size and weight.")
 
 # Display disclaimer
-st.caption("Please Note: This estimate does not replace professional health advice of a veterinarian.")
+st.caption("Please Note: This estimate does not replace the professional health advice of a veterinarian.")
 
 # Display input fields
 dog_age = st.selectbox("Select your dog's age/condition", options=age_list,index=2)
