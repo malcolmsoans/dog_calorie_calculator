@@ -20,7 +20,7 @@ def calculate_calories(dog_weight, dog_age, dog_size):
     return round(dog_rer * calc_dict[dog_age], 2)
 
 # Set title     
-st.title("PetCalulator :dog:")
+st.title("Calculate calories for your :dog:")
 
 # Display app description
 st.caption("This application provides an estimated calculation of the daily caloric needs for your dog based on their age/condition, size and weight.")
@@ -37,7 +37,6 @@ dog_weight = st.number_input("Enter your dog's current weight in kg", min_value=
 if st.button("Calculate"):
     calories = calculate_calories(dog_weight, dog_age, dog_size)
     if dog_age == age_list[0] or dog_age == age_list[1]:
-        if dog_age == age_list[0] or dog_age == age_list[1]:
-            st.markdown(f"Your dog's GER (Growth Energy Requirements) is {calories} calories per day.", unsafe_allow_html=True)
-        else:
-            st.markdown(f"Your dog's DER (Daily Energy Requirements) is {calories} calories per day.", unsafe_allow_html=True)
+        st.write(f"Your dogs GER(Growth Energy Requirements) is [{calories}] calories per day.")
+    else:
+        st.write(f"Your dogs DER(Daily Energy Requirements) is {calories} calories per day.")    
