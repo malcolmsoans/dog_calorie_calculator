@@ -38,6 +38,6 @@ if st.button("Calculate"):
     calories = calculate_calories(dog_weight, dog_age, dog_size)
     if dog_age == age_list[0] or dog_age == age_list[1]:
         if dog_age == age_list[0] or dog_age == age_list[1]:
-            st.markdown(f"<h3>Your dog's GER (Growth Energy Requirements) is <b>{calories}</b> calories per day.</h3>", unsafe_allow_html=True)
+            st.markdown(f"Your dog's GER (Growth Energy Requirements) is {calories} calories per day.", unsafe_allow_html=True)
         else:
-            st.markdown(f"<h3>Your dog's DER (Daily Energy Requirements) is <b>{calories}</b> calories per day.</h3>", unsafe_allow_html=True)
+            st.markdown(f"Your dog's DER (Daily Energy Requirements) is {calories} calories per day.", unsafe_allow_html=True)
