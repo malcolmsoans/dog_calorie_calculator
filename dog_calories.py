@@ -37,6 +37,6 @@ dog_weight = st.number_input("Enter your dog's current weight in kg", min_value=
 if st.button("Calculate"):
     calories = calculate_calories(dog_weight, dog_age, dog_size)
     if dog_age == age_list[0] or dog_age == age_list[1]:
-        st.write(f"<h3>Your dogs GER(Growth Energy Requirements) is [{calories}] calories per day.</h3>")
+        st.write(f"Your dog's GER (Growth Energy Requirements) is {calories} calories per day.")
     else:
-        st.write(f"Your dogs DER(Daily Energy Requirements) is {calories} calories per day.")    
+        st.write(f"Your dog's DER (Daily Energy Requirements) is {calories} calories per day.")
